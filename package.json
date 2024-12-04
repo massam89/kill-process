@@ -1,10 +1,12 @@
 {
   "name": "kill-process",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "kill process on windows by port",
   "main": "index.js",
   "scripts": {
-    "build": "pkg -t node16-win-x64 ./index.js --out-path build"
+    "start": "node index.js",
+    "build": "pkg -t node16-win-x64 ./index.js --output build/kill-process.exe",
+    "release": "node -e \"process.exitCode = require('child_process').execSync('gh release create v' + require('./package.json').version + ' build/kill-process.exe', { stdio: 'inherit' })\""
   },
   "author": "",
   "license": "ISC"
