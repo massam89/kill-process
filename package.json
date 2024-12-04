@@ -1,0 +1,11 @@
+{
+  "name": "kill-process",
+  "version": "1.0.0",
+  "description": "kill process on windows by port",
+  "main": "index.js",
+  "scripts": {
+    "build": "pkg -t node16-win-x64 ./index.js --out-path build"
+  },
+  "author": "",
+  "license": "ISC"
+}
